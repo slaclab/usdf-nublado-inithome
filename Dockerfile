@@ -21,6 +21,7 @@
 #   - Sets up the entrypoint.
 
 # This is just an alias to avoid repeating the base image.
+LABEL org.opencontainers.image.source https://github.com/slaclab/usdf-nublado-inithome
 FROM python:3.13.2-slim-bookworm AS base-image
 
 FROM base-image AS install-image
