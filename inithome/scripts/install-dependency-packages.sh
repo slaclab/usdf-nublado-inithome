@@ -17,10 +17,12 @@ export DEBIAN_FRONTEND=noninteractive
 
 # Update the package listing, so we know what packages exist.
 apt-get update
+apt-get -y upgrade
 
 # Install git, which is required by setuptools_scm to get a correct version
 # number when the package is installed.
 apt-get -y install --no-install-recommends git
+apt-get -y install --no-install-recommends build-essential git libffi-dev
 
 # Delete cached files we don't need any more to reduce the layer size.
 apt-get clean
